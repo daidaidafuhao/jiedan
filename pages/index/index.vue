@@ -4,8 +4,8 @@
 		<nav-bar title="任务接单">
 			<template #right>
 				<view class="nav-right-icons">
-					<text class="menu-icon">•••</text>
-					<text class="search-icon">🔍</text>
+					<uni-icons type="more-filled" size="24" color="#333"></uni-icons>
+					<uni-icons type="search" size="24" color="#333" style="margin-left: 15px;"></uni-icons>
 				</view>
 			</template>
 		</nav-bar>
@@ -22,11 +22,14 @@
 				<image class="task-intro-image" src="/static/delivery-illustration.png" mode="aspectFit"></image>
 			</view>
 			
-			<!-- 公告滚动条 -->
-			<view class="announcement-bar">
-				<view class="announcement-icon">📢</view>
-				<view class="announcement-text">公告 推按阿姆几点几分谁辣椒几个咖啡机东莞市大...</view>
-			</view>
+			<!-- 公告滚动条 - 使用uni-notice-bar替代 -->
+			<uni-notice-bar 
+				text="公告 推按阿姆几点几分谁辣椒几个咖啡机东莞市大..." 
+				scrollable 
+				color="#ff9500"
+				background-color="#fff"
+				class="custom-notice-bar">
+			</uni-notice-bar>
 			
 			<!-- 功能卡片区域 -->
 			<view class="function-cards">
@@ -67,11 +70,10 @@
 			</view>
 			
 			<!-- 推荐列表 -->
-			<view class="recommendation-list">
-				<view class="list-header">
-					<text class="list-title">推荐列表</text>
+			<uni-card title="推荐列表" :is-shadow="false" class="recommendation-card">
+				<template #extra>
 					<text class="list-more">更多 ></text>
-				</view>
+				</template>
 				
 				<!-- 任务项 -->
 				<view class="task-item">
@@ -79,13 +81,13 @@
 						<image class="user-avatar" src="/static/avatar.png"></image>
 						<view class="user-info">
 							<text class="user-name">王先生</text>
-							<text class="task-status">已下单</text>
+							<uni-tag text="已下单" type="primary" size="small" class="custom-tag"></uni-tag>
 						</view>
 					</view>
 					<view class="task-details">
 						<view class="detail-item">
 							<text class="detail-label">下单时间：</text>
-							<text class="detail-value">2025-03-29 16:52:00</text>
+							<uni-dateformat date="2025-03-29 16:52:00" format="yyyy-MM-dd hh:mm:ss" class="detail-value"></uni-dateformat>
 						</view>
 						<view class="detail-item">
 							<text class="detail-label">手机联系：</text>
@@ -103,7 +105,7 @@
 				</view>
 				
 				<!-- 更多任务项可以在这里添加 -->
-			</view>
+			</uni-card>
 			
 			<!-- 底部占位，防止内容被底部导航栏遮挡 -->
 			<view class="bottom-placeholder"></view>
@@ -539,6 +541,37 @@
 		
 		.card-desc {
 			font-size: 10px;
+		}
+	}
+	
+	.custom-notice-bar {
+		margin: 15px 0;
+		border-radius: 25px;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+		padding: 0;
+	}
+	
+	.custom-tag {
+		margin-left: auto;
+	}
+	
+	.recommendation-card {
+		background-color: #fff;
+		margin: 15px 0;
+		border-radius: 12px;
+		
+		:deep(.uni-card__header) {
+			padding: 15px;
+			border-bottom: none;
+		}
+		
+		:deep(.uni-card__content) {
+			padding: 0 15px 15px;
+		}
+		
+		.list-more {
+			font-size: 14px;
+			color: #999;
 		}
 	}
 </style>

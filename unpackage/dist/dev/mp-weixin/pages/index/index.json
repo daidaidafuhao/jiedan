@@ -3,6 +3,11 @@
   "navigationStyle": "custom",
   "usingComponents": {
     "tab-bar": "../../components/tab-bar/tab-bar",
-    "nav-bar": "../../components/nav-bar/nav-bar"
+    "nav-bar": "../../components/nav-bar/nav-bar",
+    "uni-icons": "../../uni_modules/uni-icons/components/uni-icons/uni-icons",
+    "uni-notice-bar": "../../uni_modules/uni-notice-bar/components/uni-notice-bar/uni-notice-bar",
+    "uni-tag": "../../uni_modules/uni-tag/components/uni-tag/uni-tag",
+    "uni-dateformat": "../../uni_modules/uni-dateformat/components/uni-dateformat/uni-dateformat",
+    "uni-card": "../../uni_modules/uni-card/components/uni-card/uni-card"
   }
 }
