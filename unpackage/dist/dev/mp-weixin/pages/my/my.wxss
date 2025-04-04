@@ -1,0 +1,110 @@
+/* 水平间距 */
+/* 水平间距 */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f5f7fa;
+}
+
+/* 状态栏 */
+.status-bar {
+  height: 44px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.status-bar .time {
+  font-weight: bold;
+  font-size: 16px;
+}
+.status-bar .right-icons {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.status-bar .right-icons .signal-icon, .status-bar .right-icons .wifi-icon, .status-bar .right-icons .battery-icon {
+  font-size: 16px;
+}
+
+/* 用户信息卡片 */
+.user-card {
+  padding: 20px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.user-card .user-info {
+  display: flex;
+  align-items: center;
+}
+.user-card .user-info .user-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.user-card .user-info .user-details {
+  display: flex;
+  flex-direction: column;
+}
+.user-card .user-info .user-details .user-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+.user-card .user-info .user-details .user-contact {
+  font-size: 14px;
+  color: #666;
+}
+.user-card .edit-profile {
+  padding: 5px 15px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+}
+.user-card .edit-profile .edit-text {
+  font-size: 14px;
+  color: #666;
+}
+
+/* 菜单列表 */
+.menu-list {
+  margin-top: 15px;
+  background-color: #fff;
+}
+.menu-list .menu-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #f5f5f5;
+}
+.menu-list .menu-item .menu-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+  font-size: 18px;
+}
+.menu-list .menu-item .menu-text {
+  flex: 1;
+  font-size: 16px;
+  color: #333;
+}
+.menu-list .menu-item .menu-arrow {
+  font-size: 16px;
+  color: #ccc;
+}
+
+/* 底部占位 */
+.bottom-placeholder {
+  height: 70px;
+  /* 底部导航栏高度 + 一些额外空间 */
+}

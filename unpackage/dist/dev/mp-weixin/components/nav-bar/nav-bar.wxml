@@ -1,0 +1,1 @@
+<view class="nav-bar"><view class="status-bar" style="{{'height:' + a}}"></view><view class="nav-content"><view wx:if="{{b}}" class="logo-container"><image class="logo" src="{{c}}" mode="aspectFit"></image></view><view class="title-container"><text class="title">{{d}}</text></view><view class="right-icons"><slot name="right"></slot></view></view></view>
